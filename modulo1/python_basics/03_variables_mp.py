@@ -1,61 +1,65 @@
-# Enteros, cadena de caracteres , boolenao, none 
+# Cadenas, enteros, flotantes, booleanos y None
 
-nombre= "Josue Merino" #string 
-edad = 25              #int
-altura= 1.65           #float
-activo = True          #booleano
-nulo = None            #NoneType
+usuario = "Mikaela Zurita"          # string
+nivel_estres = 25                   # int
+indice_bienestar = 8.5              # float
+sesion_activa = True                # booleano
+emocion_no_registrada = None        # NoneType
 
-print(type(nombre))
-print(type(edad))
-print(type(altura))
-print(type(activo))
-print(type(nulo))
+print(type(usuario))
+print(type(nivel_estres))
+print(type(indice_bienestar))
+print(type(sesion_activa))
+print(type(emocion_no_registrada))
 
-# Asignar valor  varias variables em uma linea 
-a, b, c = 1, 10, 7
+# Asignar valores a varias variables en una línea
+felicidad, ansiedad, calma = 7, 4, 9
 
-print(a)
-print(b)
-print(c)
+print(felicidad)
+print(ansiedad)
+print(calma)
 
-#Asignar el mismo valor a multiples variables 
+# Asignar el mismo valor a múltiples variables
+estres_manana = estres_tarde = estres_noche = 5
 
-a=b=c= 2
-print(a)
-print(b)
-print(c)
+print(estres_manana)
+print(estres_tarde)
+print(estres_noche)
 
-#Intercambiar valores 
-x,y = 10,20
-print(x,y)
-x,y = y,x
-print(x,y)
+# Intercambiar niveles emocionales
+estado_actual, estado_anterior = "Calma", "Ansiedad"
 
-#Convenciones de nombres 
-nombre_completo = "Josue Merino" #snake_case
-nombreCompleto = "Josue Merino"  #NO USAR camelCase
-MAX_REINTENTOS = 3               #MAYUSCULAS SOSTENIDAS para constantes
-_variable_interna = "privada"    #para uso interno
+print(estado_actual, estado_anterior)
 
-#Manejo de Enteros
-pequeño = 42
-negativo = -5
-grande = 123456789012
-enorme = 10 ** 100  
+estado_actual, estado_anterior = estado_anterior, estado_actual
 
-print(pequeño)
-print(negativo)
-print(grande)
-print(enorme)
+print(estado_actual, estado_anterior)
 
-#Bases Numéricas
-binario = 0b1010 
-octal = 0o17
-hexadecimal = 0xFF
-print(binario, octal, hexadecimal)
+# Convenciones de nombres
+nombre_usuario = "Mikaela Zurita"     # snake_case
+nombreUsuario = "Mikaela Zurita"      # NO USAR camelCase
+MAX_SESIONES_DIARIAS = 3              # Constante
+_registro_interno = "Seguimiento"     # Uso interno
 
-#Convertir de decimal a otras bases 
+# Manejo de enteros
+emociones_registradas = 42
+estado_critico = -5
+usuarios_registrados = 123456789
+total_registros = 10 ** 10
+
+print(emociones_registradas)
+print(estado_critico)
+print(usuarios_registrados)
+print(total_registros)
+
+# Bases numéricas
+sesiones_binario = 0b1010
+sesiones_octal = 0o17
+sesiones_hexadecimal = 0xFF
+
+print(sesiones_binario, sesiones_octal, sesiones_hexadecimal)
+
+# Convertir cantidad de sesiones a otras bases
 print(bin(255))
 print(oct(255))
-print(hex(255))  
+print(hex(255))

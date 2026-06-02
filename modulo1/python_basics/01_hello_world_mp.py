@@ -1,21 +1,21 @@
-print("Hello, World")
+print("Bienvenido a TherAppy")
 
-edad = 22
-nombre = "Mikaela Zurita"
+nivel_estres = 22
+usuario = "Mikaela Zurita"
 
-print(f"Me llamo {nombre} y tengo {edad} años.")
+print(f"Hola {usuario}, tu nivel de estrés registrado es {nivel_estres}.")
 
-print("Hola", "Josue", "Merino")
+print("TherAppy", "Control Emocional")
 
-print("Nombre", nombre, "edad", edad)
-telefono = 123456789
+print("Usuario", usuario, "Nivel de Estrés", nivel_estres)
 
-print(nombre, edad, telefono, sep = " , ") 
+sesiones_completadas = 15
 
-print(nombre, end = " | ") 
-print(edad, end = " | ") 
-print(telefono, end = " |") 
+print(usuario, nivel_estres, sesiones_completadas, sep=" | ")
 
-print(f"{3.14159:.2f}")
-print(f"{3.14159:,}")
+print(usuario, end=" | ")
+print(nivel_estres, end=" | ")
+print(sesiones_completadas, end=" | ")
 
+print(f"{4.8576:.2f}")  # Promedio de bienestar emocional
+print(f"{4857.6:,}")    # Total de registros emocionales

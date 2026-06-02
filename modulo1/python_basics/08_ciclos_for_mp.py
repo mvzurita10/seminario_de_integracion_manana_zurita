@@ -1,75 +1,73 @@
 print("Ciclo for")
-frutas=["manzana", "banana", "naranja"]
-for fruta in frutas:
-    print(fruta)
 
-print("Recorrer palabras")
-for letra in "manzana":
+emociones = ["Felicidad", "Calma", "Gratitud"]
+
+for emocion in emociones:
+    print(emocion)
+
+print("Recorrer palabra")
+for letra in "TherAppy":
     print(letra)
 
 print("Recorrer rango")
-for i in range(1,6):
-    print(i)
+for dia in range(1, 6):
+    print(f"Día {dia}")
 
-print("Recorrer rango configurar paso")
-for i in range(1,10,2):
-    print(i)
+print("Recorrer rango configurando paso")
+for dia in range(1, 10, 2):
+    print(f"Día {dia}")
 
 print("Enumerar lista")
-for i, fruta in enumerate(frutas):
-    print(i,fruta)
+for i, emocion in enumerate(emociones):
+    print(i, emocion)
 
 print("Dos listas a la vez")
-nombres = ["Ana", "Luis"]
-edades = [25, 30]
-for nombre, edad in zip(nombres, edades):
-    print(nombre, edad) 
+usuarios = ["Mikaela", "Josue"]
+niveles_bienestar = [8, 9]
+
+for usuario, bienestar in zip(usuarios, niveles_bienestar):
+    print(usuario, bienestar)
 
 print("Control del ciclo")
+
 print("break")
-for i in range(5):
-    if i == 3:
+for sesion in range(5):
+    if sesion == 3:
         break
-    print(i)
+    print(f"Sesión {sesion}")
+
 print("continue")
-for i in range(5):
-    if i == 2:
+for sesion in range(5):
+    if sesion == 2:
         continue
-    print(i)
+    print(f"Sesión {sesion}")
 
 print("for anidado")
-for i in range(3):
-    for j in range(2):
-        print(i,j)
-print("lista compresion forma corta")
-cuadrados = [x**2 for x in range(5)]
-print(cuadrados)
+for semana in range(3):
+    for dia in range(2):
+        print(semana, dia)
 
-#Repaso 
-print("Ventas diarias de un vendedor")
+print("Lista por comprensión")
+puntajes_bienestar = [x**2 for x in range(5)]
+print(puntajes_bienestar)
 
-ventas = [120, 80, 200, 50, 300]
-total_ventas_validas = 0
-bono_acumulado = 0
+# Repaso
+print("Seguimiento emocional de usuarios en TherAppy")
 
-for venta in ventas:
-    if venta > 100:
-        total_ventas_validas += 1
-        if venta > 250:
-            bono_acumulado += 30
+niveles_estres = [3, 8, 6, 2, 9]
+
+registros_validos = 0
+puntos_bienestar = 0
+
+for nivel in niveles_estres:
+
+    if nivel > 5:
+        registros_validos += 1
+
+        if nivel > 7:
+            puntos_bienestar += 30
         else:
-            bono_acumulado += 10
+            puntos_bienestar += 10
 
-print(f"Total de ventas válidas: {total_ventas_validas}")
-print(f"Total de bono acumulado: {bono_acumulado}")
-
-
-
-
-
-
-
-
-#Reglas: solo cuentan ventas mayores a 100, si la venta es mayor a 250 tiene un bono de 30, si no un bono de 10, al final mostrar total de ventas y total de bonos acumulado 
-#resuelve el enunciado utilizando un ciclo for y control de ciclo
-
+print(f"Total de registros que requieren atención: {registros_validos}")
+print(f"Puntos de seguimiento emocional acumulados: {puntos_bienestar}")

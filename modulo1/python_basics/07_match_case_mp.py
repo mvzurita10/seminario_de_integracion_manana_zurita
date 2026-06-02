@@ -1,24 +1,27 @@
-print("match-case")
-comando = input("Comando proceso iniciar/parar/reiniciar: ")
-match comando:
-    case "iniciar":
-        print("Sistema iniciado")
-    case "parar":
-        print("Deteniendose")
-    case "reiniciar":
-        print("Reiniciando sistema")
+print("TherAppy - Gestión de Actividades Emocionales")
+
+actividad = input("Seleccione una actividad (respirar/meditar/relajarse): ")
+
+match actividad:
+    case "respirar":
+        print("Iniciando ejercicio de respiración guiada")
+    case "meditar":
+        print("Iniciando sesión de meditación")
+    case "relajarse":
+        print("Activando música relajante")
     case _:
-        print(f"Comando '{comando}' no reconocido")
+        print(f"La actividad '{actividad}' no está disponible")
 
+print("Evaluación del Estado Emocional")
 
-print("Match condiciones")
-numero = 7
-match numero:
-    case n if n<0:
-        print(f"{n} es negativo")
-    case 0: 
-        print("Es cero")
-    case n if n%2==0:
-        print(f"{n} es par")
-    case n:       
-        print(f"{n} es positivo e impar") 
+nivel_estres = 7
+
+match nivel_estres:
+    case n if n < 0:
+        print(f"{n} es un valor no válido")
+    case 0:
+        print("Nivel de estrés inexistente")
+    case n if n % 2 == 0:
+        print(f"Nivel de estrés {n}: estado emocional estable")
+    case n:
+        print(f"Nivel de estrés {n}: se recomienda realizar ejercicios de relajación")
