@@ -10,7 +10,7 @@ class RegisterTests(TestCase):
 
     def setUp(self):
         self.client = APIClient()
-        self.url    = '/api/auth/register/' 
+        self.url    = '/api/auth/register/'
         self.data   = {
             'username':  'john',
             'email':     'john@test.com',

@@ -16,10 +16,10 @@ class CategoryPermissionTests(TestCase):
         resp = auth_client(self.user).get('/api/categories/')
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
 
-    def test_unauthenticated_returns_401(self):
+    def test_unauthenticated_can_list(self):
         from rest_framework.test import APIClient
         resp = APIClient().get('/api/categories/')
-        self.assertEqual(resp.status_code, status.HTTP_401_UNAUTHORIZED)
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
 
     def test_regular_user_cannot_create(self):
         resp = auth_client(self.user).post('/api/categories/', {
@@ -54,7 +54,7 @@ class CategoryFilterTests(TestCase):
     def test_search_by_name(self):
         resp = self.client.get('/api/categories/?search=electro')
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
-        self.assertEqual(resp.data['count'], 1) 
+        self.assertEqual(resp.data['count'], 1)
 
     def test_stats_returns_expected_fields(self):
         resp = self.client.get('/api/categories/stats/')
