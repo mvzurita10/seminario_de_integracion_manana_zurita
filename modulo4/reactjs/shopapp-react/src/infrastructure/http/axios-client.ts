@@ -90,7 +90,10 @@ apiClient.interceptors.response.use(
     const originalRequest = error.config as AxiosRequestConfig & { _retry?: boolean }
 
     // Solo intentar refresh en 401 y si no es ya un reintento
-    if (error.response?.status !== 401 || originalRequest._retry) {
+    // Las rutas de autenticación nunca deben entrar al flujo de refresh
+    const url = originalRequest.url ?? ''
+    const isAuthRoute = url.includes('/auth/login/') || url.includes('/auth/register/')
+    if (error.response?.status !== 401 || originalRequest._retry || isAuthRoute) {
       return Promise.reject(parseApiError(error))
     }
 

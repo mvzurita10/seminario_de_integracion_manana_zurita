@@ -12,7 +12,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/presentation/components/ui/dropdown-menu'
-import { Avatar, AvatarFallback } from '@/presentation/components/ui/avatar'
 import { Separator } from '@/presentation/components/ui/separator'
 import { useCartStore } from '@/presentation/store/cart.store'
 import { useEffect } from 'react'
@@ -21,10 +20,6 @@ import { UserAvatar } from './UserAvatar'
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-/** Obtiene las iniciales del username para el avatar. */
-function getInitials(username: string): string {
-  return username.slice(0, 2).toUpperCase()
-}
 
 /** Clases para los enlaces de navegación activos/inactivos. */
 function navLinkClass({ isActive }: { isActive: boolean }) {
@@ -38,7 +33,7 @@ function navLinkClass({ isActive }: { isActive: boolean }) {
 
 export default function AppShell() {
   const navigate = useNavigate()
-  const { profile, fetchProfile, clearProfile } = useProfileStore()
+  const { profile, fetchProfile } = useProfileStore()
   const { user, logout } = useAuthStore()
 
   // En módulos siguientes esto vendrá del CartStore
