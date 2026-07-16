@@ -3,9 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Suspense, lazy, useEffect } from 'react'
 import { useAuthStore } from '@/presentation/store/auth.store'
 import ProtectedRoute from './ProtectedRoute'
-import PlaceholderPage from '../pages/PlaceholderPage'
 import AppShell from '../components/AppShell'
-import AdminProductsPage from '../components/admin/AdminProductsPage'
 
 
 
@@ -24,7 +22,7 @@ const OrderDetailPage = lazy(() => import('../pages/orders/OrderDetailPage'))
 const ProfilePage = lazy(() => import('../pages/profile/ProfilePage'))
 const AdminDashboardPage = lazy(() => import('../pages/admin/AdminDashboardPage'))
 const AdminCategoriesPage = lazy(() => import('../pages/admin/AdminCategoriesPage'))
-const AdminProductsPage = lazy(() => import('../pages/admin/AdminProductsPage'))
+const AdminProductsPage = lazy(() => import('../components/admin/AdminProductsPage'))
 const AdminOrdersPage = lazy(() => import('../pages/admin/AdminOrdersPage'))
 const AdminOrderDetailPage = lazy(() => import('../pages/admin/AdminOrderDetailPage'))
 const AdminUsersPage = lazy(() => import('../pages/admin/AdminUsersPage'))
